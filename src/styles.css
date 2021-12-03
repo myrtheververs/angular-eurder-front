@@ -127,6 +127,7 @@ form {
   padding-right: 0.75rem;
   padding-bottom: 0.375rem;
   padding-left: 0.75rem;
+
 }
 
 .btn:not(:disabled):not(.disabled) {
@@ -152,12 +153,16 @@ form {
 
   border: 1px solid black;
 
-  margin-left: .375rem;
+  margin-top: 1rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
 }
 
 .btn-create {
   color: white;
   background: limegreen;
+  margin: 5px;
+  padding: 0.5rem;
 }
 
 .card {
