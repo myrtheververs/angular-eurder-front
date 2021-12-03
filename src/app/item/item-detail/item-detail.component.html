@@ -1,0 +1,46 @@
+<main>
+  <section>
+
+    <div *ngIf="item">
+      <label class="label-id">{{item.id}}</label>
+      <h3 class="section-title">Item</h3>
+    </div>
+
+
+    <div *ngIf="item">
+
+      <h2>{{item.name | uppercase}} Details</h2>
+
+      <div class="form-group">
+        <form class="form-group">
+          <label>Name</label>
+          <input class = "form-control"  [readonly]="true" type="text" value={{item.name}}>
+
+
+          <label>Description</label>
+          <textarea class = "form-control"  [readonly]="true"  type="text" value={{item.description}}>
+          </textarea>
+
+
+
+          <label>Price</label>
+          <input class = "form-control" [readonly]="true" type="number" value={{item.price}} >
+
+          <label>Amount of stock</label>
+          <input class = "form-control" [readonly]="true" type="number" value={{item.amountOfStock}} >
+
+          <button class="btn" >
+            <a routerLink="/items/{{item.id}}/edit">Edit item</a>
+          </button>
+
+
+          <button class = "btn"  (click)="goBack()">Go Back</button>
+        </form>
+      </div>
+
+    </div>
+
+  </section>
+</main>
+
+

@@ -1,0 +1,39 @@
+<h1>UPDATE page linkworks</h1>
+
+<main>
+  <section>
+
+    <div *ngIf="item">
+      <label class="label-id">{{item.id}}</label>
+      <h3 class="section-title">Item</h3>
+    </div>
+
+
+    <div *ngIf="item">
+
+      <h2>{{item.name | uppercase}} Edit item</h2>
+
+      <div class="form-group">
+        <form class="form-group">
+          <label>Name</label>
+          <input class = "form-control"  [readonly]="false" type="text" placeholder={{item.name}}>
+
+          <label>Description</label>
+          <input id="signin" class = "form-control" [readonly]="false"  type="text" placeholder={{item.description}}>
+
+
+          <label>Price</label>
+          <input class = "form-control" [readonly]="false" type="number" placeholder= {{item.price}} >
+
+          <label>Amount of stock</label>
+          <input class = "form-control" [readonly]="false" type="number" placeholder={{item.amountOfStock}} >
+
+          <button class="btn" (click)="save()">Edit</button>
+          <button class = "btn"  (click)="goBack()">Go Back</button>
+        </form>
+      </div>
+
+    </div>
+
+  </section>
+</main>
